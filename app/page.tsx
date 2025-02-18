@@ -62,7 +62,7 @@ export default function LandingPage() {
                     alt="Download on the App Store"
                     className="h-[40px] w-auto"
                     width={250}
-                    height={83}
+                    height={84}
                   />
                 </a>
                 <a
@@ -76,7 +76,7 @@ export default function LandingPage() {
                     alt="Download on the Mac App Store"
                     className="h-[40px] w-auto"
                     width={250}
-                    height={83}
+                    height={84}
                   />
                 </a>
               </div>
