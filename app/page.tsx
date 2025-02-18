@@ -55,7 +55,7 @@ export default function LandingPage() {
                   href="https://apps.apple.com/jp/app/ai-%E3%83%9D%E3%83%A2%E3%83%89%E3%83%BC%E3%83%AD%E3%82%BF%E3%82%A4%E3%83%9E%E3%83%BC-poco/id6739179159?platform=iphone"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block"
+                  className="inline-flex items-center space-x-2"
                 >
                   <Image
                     src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83"
