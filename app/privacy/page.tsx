@@ -2,6 +2,7 @@
 
 import { useLocale } from '@/contexts/LocaleContext'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function PrivacyPage() {
   const { translations: t } = useLocale()
@@ -12,10 +13,12 @@ export default function PrivacyPage() {
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-14 items-center">
           <Link href="/" className="flex items-center space-x-2">
-            <img
+            <Image
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1024-EIzYLxy841Bi12Gi7ssYrzqcZnTRfP.png"
               alt="Poco AI Logo"
               className="h-8 w-8"
+              width={32}
+              height={32}
             />
             <span className="font-bold">{t.header.title}</span>
           </Link>
@@ -28,7 +31,7 @@ export default function PrivacyPage() {
           <h1 className="text-3xl font-bold mb-8">Privacy Policy</h1>
           <div className="prose dark:prose-invert">
             <p className="mb-4">
-              This Privacy Policy (hereinafter referred to as "this Policy") explains how personal information of users (hereinafter referred to as "Users") is handled when using Poco (hereinafter referred to as "this App"). By using this App, you are deemed to have agreed to this Policy.
+              This Privacy Policy (hereinafter referred to as &quot;this Policy&quot;) explains how personal information of users (hereinafter referred to as &quot;Users&quot;) is handled when using Poco (hereinafter referred to as &quot;this App&quot;). By using this App, you are deemed to have agreed to this Policy.
             </p>
 
             <h2 className="text-xl font-semibold mt-8 mb-4">1. Types of Information Collected</h2>
@@ -41,7 +44,7 @@ export default function PrivacyPage() {
             <h2 className="text-xl font-semibold mt-8 mb-4">2. Methods of Information Collection</h2>
             <p>This App collects information through the following methods:</p>
             <ul className="list-disc pl-6 mb-4">
-              <li>In-App Behavior Logs: Sends and analyzes Users' operation history within the app using analysis tools.</li>
+              <li>In-App Behavior Logs: Sends and analyzes Users&apos; operation history within the app using analysis tools.</li>
             </ul>
 
             <h2 className="text-xl font-semibold mt-8 mb-4">3. Purpose of Using Information</h2>

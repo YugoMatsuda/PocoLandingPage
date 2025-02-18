@@ -3,6 +3,7 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { useLocale } from '@/contexts/LocaleContext'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function LandingPage() {
   const { translations: t } = useLocale()
@@ -12,9 +13,11 @@ export default function LandingPage() {
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-14 items-center">
           <div className="flex items-center space-x-2">
-            <img
+            <Image
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1024-EIzYLxy841Bi12Gi7ssYrzqcZnTRfP.png"
               alt="Poco AI Logo"
+              width={32}
+              height={32}
               className="h-8 w-8"
             />
             <span className="font-bold">{t.header.title}</span>
@@ -29,10 +32,12 @@ export default function LandingPage() {
           <div className="container relative z-10">
             <div className="mx-auto max-w-6xl">
               <div className="overflow-hidden rounded-2xl shadow-2xl">
-                <img
+                <Image
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E5%90%8D%E7%A7%B0%E6%9C%AA%E8%A8%AD%E5%AE%9A%E3%81%AE%E3%83%86%E3%82%99%E3%82%B5%E3%82%99%E3%82%A4%E3%83%B3%20(6)-WUlp8lZWmNxlSV4rtG2rZb1tTIDlBK.png"
                   alt="Poco AI app interface showing productivity tracking across MacBook with statistics dashboard, iPad with focus goals, Apple Watches with Reading and Work timers, and iPhones displaying AI feedback with beautiful gradients"
                   className="w-full"
+                  width={1920}
+                  height={1080}
                 />
               </div>
             </div>
@@ -52,10 +57,12 @@ export default function LandingPage() {
                   rel="noopener noreferrer"
                   className="inline-block"
                 >
-                  <img
+                  <Image
                     src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83"
                     alt="Download on the App Store"
                     className="h-[40px] w-auto"
+                    width={250}
+                    height={83}
                   />
                 </a>
                 <a
@@ -64,10 +71,12 @@ export default function LandingPage() {
                   rel="noopener noreferrer"
                   className="inline-block"
                 >
-                  <img
+                  <Image
                     src="https://tools.applemediaservices.com/api/badges/download-on-the-mac-app-store/black/en-us?size=250x83"
                     alt="Download on the Mac App Store"
                     className="h-[40px] w-auto"
+                    width={250}
+                    height={83}
                   />
                 </a>
               </div>
@@ -125,10 +134,12 @@ export default function LandingPage() {
               </div>
               <div className="relative p-4 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-orange-300 via-blue-300 to-purple-300 opacity-30 blur-2xl"></div>
-                <img
+                <Image
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/beatutiful_timer-eEvN7W3eTbVqN7UgXTzDeKoPndg0r5.png"
                   alt="Beautiful Timer Interface"
                   className="w-full max-w-2xl rounded-lg shadow-lg relative z-10"
+                  width={1920}
+                  height={1080}
                 />
               </div>
             </div>
@@ -145,10 +156,12 @@ export default function LandingPage() {
               </div>
               <div className="relative p-4 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-orange-300 via-blue-300 to-purple-300 opacity-30 blur-2xl"></div>
-                <img
+                <Image
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/focus_target-nydkOQjCsYZoNcqbT9ebuvhwI9hGhX.png"
                   alt="Focus Target Analytics"
                   className="w-full max-w-2xl rounded-lg shadow-lg relative z-10"
+                  width={1920}
+                  height={1080}
                 />
               </div>
             </div>
@@ -165,10 +178,12 @@ export default function LandingPage() {
               </div>
               <div className="relative p-4 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-orange-300 via-blue-300 to-purple-300 opacity-30 blur-2xl"></div>
-                <img
+                <Image
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/sync_device-YDVtdL0g9BkGmYwklSX4Th2gyrfixM.png"
                   alt="Cross Device Sync"
                   className="w-full max-w-2xl rounded-lg shadow-lg relative z-10"
+                  width={1920}
+                  height={1080}
                 />
               </div>
             </div>
@@ -224,9 +239,11 @@ export default function LandingPage() {
         <div className="container grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <img
+              <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1024-EIzYLxy841Bi12Gi7ssYrzqcZnTRfP.png"
                 alt="Poco AI Logo"
+                width={32}
+                height={32}
                 className="h-8 w-8"
               />
               <span className="font-bold">{t.header.title}</span>
@@ -256,7 +273,7 @@ export default function LandingPage() {
   )
 }
 
-export function LocaleSwitcher() {
+function LocaleSwitcher() {
   const { locale, setLocale } = useLocale()
 
   if (process.env.NODE_ENV !== 'development') {

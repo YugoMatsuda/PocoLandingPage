@@ -2,6 +2,7 @@
 
 import { useLocale } from '@/contexts/LocaleContext'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function TermsPage() {
   const { translations: t } = useLocale()
@@ -14,10 +15,12 @@ export default function TermsPage() {
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-14 items-center">
           <Link href="/" className="flex items-center space-x-2">
-            <img
+            <Image
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1024-EIzYLxy841Bi12Gi7ssYrzqcZnTRfP.png"
               alt="Poco AI Logo"
               className="h-8 w-8"
+              width={32}
+              height={32}
             />
             <span className="font-bold">{t.header.title}</span>
           </Link>
@@ -29,15 +32,15 @@ export default function TermsPage() {
         <div className="max-w-3xl mx-auto">
           <h1 className="text-3xl font-bold mb-8">Terms of Service</h1>
           <div className="prose dark:prose-invert">
-            <p className="mb-4">Welcome to PomodoLog (hereinafter referred to as "the App"). These Terms of Service (hereinafter referred to as "Terms") govern your use of the App. By accessing or using the App, you agree to comply with and be bound by these Terms. If you do not agree to these Terms, please do not use the App.</p>
+            <p className="mb-4">Welcome to PomodoLog (hereinafter referred to as &quot;the App&quot;). These Terms of Service (hereinafter referred to as &quot;Terms&quot;) govern your use of the App. By accessing or using the App, you agree to comply with and be bound by these Terms. If you do not agree to these Terms, please do not use the App.</p>
 
             <h2 className="text-xl font-semibold mt-8 mb-4">1. Service Description</h2>
             <p>PomodoLog provides users with tools to record, analyze, and receive notifications regarding their caffeine intake. Additionally, the App offers subscription-based services that provide enhanced features and functionalities.</p>
 
             <h2 className="text-xl font-semibold mt-8 mb-4">2. User Accounts</h2>
             <ul className="list-disc pl-6 mb-4">
-              <li><strong>Account Registration:</strong> Users are not required to create a separate account to use the App. Instead, data is stored securely on Apple's iCloud servers.</li>
-              <li><strong>Required Information:</strong> To use the App, users must have an active iCloud account. The App utilizes the user's iCloud account for data storage purposes.</li>
+              <li><strong>Account Registration:</strong> Users are not required to create a separate account to use the App. Instead, data is stored securely on Apple&apos;s iCloud servers.</li>
+              <li><strong>Required Information:</strong> To use the App, users must have an active iCloud account. The App utilizes the user&apos;s iCloud account for data storage purposes.</li>
             </ul>
 
             <h2 className="text-xl font-semibold mt-8 mb-4">3. User Responsibilities</h2>
@@ -62,7 +65,7 @@ export default function TermsPage() {
             </ul>
 
             <h2 className="text-xl font-semibold mt-8 mb-4">7. Disclaimer</h2>
-            <p>The App is provided on an "AS IS" and "AS AVAILABLE" basis. The developer disclaims all warranties of any kind, whether express or implied, including but not limited to the implied warranties of merchantability, fitness for a particular purpose, and non-infringement. The developer does not warrant that the App will be uninterrupted, secure, or error-free.</p>
+            <p>The App is provided on an &quot;AS IS&quot; and &quot;AS AVAILABLE&quot; basis. The developer disclaims all warranties of any kind, whether express or implied, including but not limited to the implied warranties of merchantability, fitness for a particular purpose, and non-infringement. The developer does not warrant that the App will be uninterrupted, secure, or error-free.</p>
 
             <h2 className="text-xl font-semibold mt-8 mb-4">8. Limitation of Liability</h2>
             <p>In no event shall the developer be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from:</p>
@@ -84,7 +87,7 @@ export default function TermsPage() {
 
             <h2 className="text-xl font-semibold mt-8 mb-4">12. Other Provisions</h2>
             <ul className="list-disc pl-6 mb-4">
-              <li><strong>Payment Terms:</strong> For subscription services and any in-app purchases, payments are processed through Apple's App Store. All transactions are subject to Apple's <a href="https://www.apple.com/legal/internet-services/terms/site.html" className="text-blue-600 hover:underline">Terms of Service</a> and <a href="https://www.apple.com/legal/privacy/" className="text-blue-600 hover:underline">Privacy Policy</a>.</li>
+              <li><strong>Payment Terms:</strong> For subscription services and any in-app purchases, payments are processed through Apple&apos;s App Store. All transactions are subject to Apple&apos;s <a href="https://www.apple.com/legal/internet-services/terms/site.html" className="text-blue-600 hover:underline">Terms of Service</a> and <a href="https://www.apple.com/legal/privacy/" className="text-blue-600 hover:underline">Privacy Policy</a>.</li>
             </ul>
 
             <h2 className="text-xl font-semibold mt-8 mb-4">13. Contact Information</h2>
