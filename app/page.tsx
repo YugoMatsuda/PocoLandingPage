@@ -2,6 +2,7 @@
 
 import { Card, CardContent } from "@/components/ui/card"
 import { useLocale } from '@/contexts/LocaleContext'
+import Link from 'next/link'
 
 export default function LandingPage() {
   const { translations: t } = useLocale()
@@ -16,7 +17,7 @@ export default function LandingPage() {
               alt="Poco AI Logo"
               className="h-8 w-8"
             />
-            <span className="font-bold">AI Pomodoro Timer Poco</span>
+            <span className="font-bold">{t.header.title}</span>
           </div>
           <div className="flex-1"></div>
         </div>
@@ -218,6 +219,7 @@ export default function LandingPage() {
         </section>
       </main>
 
+      {/* Footer */}
       <footer className="border-t py-12 md:py-16 lg:py-24">
         <div className="container grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div className="space-y-4">
@@ -227,15 +229,23 @@ export default function LandingPage() {
                 alt="Poco AI Logo"
                 className="h-8 w-8"
               />
-              <span className="font-bold">AI Pomodoro Timer Poco</span>
+              <span className="font-bold">{t.header.title}</span>
             </div>
-            <p className="text-sm text-muted-foreground">Maximize your focus with the power of AI.</p>
+            <p className="text-sm text-muted-foreground">{t.footer.subtitle}</p>
           </div>
           <div>
-            <h3 className="mb-4 text-sm font-medium">Legal</h3>
+            <h3 className="mb-4 text-sm font-medium">{t.footer.legal.title}</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>Terms of Service</li>
-              <li>Privacy Policy</li>
+              <li>
+                <Link href="/terms" className="hover:underline">
+                  {t.footer.legal.terms}
+                </Link>
+              </li>
+              <li>
+                <Link href="/privacy" className="hover:underline">
+                  {t.footer.legal.privacy}
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

@@ -53,5 +53,31 @@ export const en = {
       terms: "Terms of Service",
       privacy: "Privacy Policy"
     }
+  },
+  terms: {
+    title: "Terms of Service",
+    lastUpdated: "Last Updated: March 20, 2024",
+    sections: [
+      {
+        title: "1. Acceptance of Terms",
+        content: "By accessing and using Poco AI, you agree to be bound by these Terms of Service and all applicable laws and regulations."
+      },
+      {
+        title: "2. Use of Service",
+        content: "Poco AI provides a productivity timer and AI coaching service. You agree to use this service only for its intended purpose and in compliance with all applicable laws."
+      },
+      {
+        title: "3. Privacy",
+        content: "Your privacy is important to us. Please review our Privacy Policy to understand how we collect, use, and protect your personal information."
+      },
+      {
+        title: "4. User Data",
+        content: "We store and process your productivity data to provide personalized insights and recommendations. You retain all rights to your data."
+      },
+      {
+        title: "5. Modifications",
+        content: "We reserve the right to modify these terms at any time. Continued use of the service constitutes acceptance of modified terms."
+      }
+    ]
   }
 } 

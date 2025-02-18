@@ -17,7 +17,6 @@ const LocaleContext = createContext<LocaleContextType | undefined>(undefined)
 
 export function LocaleProvider({ children }: { children: ReactNode }) {
   const [locale, setLocale] = useState<Locale>('en')
-
   const translations = locale === 'ja' ? ja : en
 
   return (
