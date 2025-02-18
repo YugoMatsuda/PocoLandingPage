@@ -1,6 +1,11 @@
+'use client'
+
 import { Card, CardContent } from "@/components/ui/card"
+import { useLocale } from '@/contexts/LocaleContext'
 
 export default function LandingPage() {
+  const { translations: t } = useLocale()
+
   return (
     <div className="flex min-h-screen flex-col">
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -33,12 +38,11 @@ export default function LandingPage() {
             <div className="mx-auto mt-8 max-w-3xl text-center">
               <h1 className="font-heading text-3xl font-bold sm:text-4xl md:text-5xl lg:text-6xl mb-4 mt-8">
                 <span className="bg-gradient-to-r from-orange-500 via-blue-500 to-purple-500 bg-clip-text text-transparent">
-                  AI motivate your productivity
+                  {t.hero.title}
                 </span>
               </h1>
               <p className="max-w-2xl mx-auto text-base text-gray-600 sm:text-lg mb-8">
-                Maximize your productivity with AI-personalized analysis, cross-platform synchronization, and beautiful
-                analytics.
+                {t.hero.subtitle}
               </p>
               <div className="flex flex-col items-center sm:flex-row gap-4 justify-center">
                 <a
@@ -76,10 +80,10 @@ export default function LandingPage() {
         <section className="container space-y-6 bg-slate-50 py-8 dark:bg-slate-900 md:py-12 lg:py-24">
           <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
             <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl bg-gradient-to-r from-orange-500 via-blue-500 to-purple-500 bg-clip-text text-transparent">
-              Key Features
+              {t.features.title}
             </h2>
             <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-              Everything you need to maximize your focus
+              {t.features.subtitle}
             </p>
           </div>
           <div className="mx-auto max-w-4xl space-y-16 py-8">
@@ -87,11 +91,10 @@ export default function LandingPage() {
             <div className="flex flex-col items-center space-y-6">
               <div className="text-center space-y-4">
                 <h3 className="text-2xl font-bold bg-gradient-to-r from-orange-500 via-blue-500 to-purple-500 bg-clip-text text-transparent">
-                  AI Coaching
+                  {t.features.aiCoaching.title}
                 </h3>
                 <p className="text-lg text-muted-foreground max-w-2xl">
-                  AI boosts your motivation during breaks with personalized encouragement and feedback, helping you
-                  maintain momentum and achieve your productivity goals.
+                  {t.features.aiCoaching.description}
                 </p>
               </div>
               <Card className="w-full max-w-4xl overflow-hidden">
@@ -113,11 +116,10 @@ export default function LandingPage() {
             <div className="flex flex-col items-center space-y-6">
               <div className="text-center space-y-4">
                 <h3 className="text-2xl font-bold bg-gradient-to-r from-orange-500 via-blue-500 to-purple-500 bg-clip-text text-transparent">
-                  Beautiful Work Timer
+                  {t.features.timer.title}
                 </h3>
                 <p className="text-lg text-muted-foreground max-w-2xl">
-                  Manage your work topics with a simple and beautiful timer interface using tags. Our elegant design
-                  helps you stay focused and motivated throughout your work sessions.
+                  {t.features.timer.description}
                 </p>
               </div>
               <div className="relative p-4 overflow-hidden">
@@ -134,11 +136,10 @@ export default function LandingPage() {
             <div className="flex flex-col items-center space-y-6">
               <div className="text-center space-y-4">
                 <h3 className="text-2xl font-bold bg-gradient-to-r from-orange-500 via-blue-500 to-purple-500 bg-clip-text text-transparent">
-                  Focus Goal Setting
+                  {t.features.goals.title}
                 </h3>
                 <p className="text-lg text-muted-foreground max-w-2xl">
-                  Set and track progress towards focus time goals for each tag. Our intuitive analytics help you
-                  visualize your productivity trends and achieve your targets.
+                  {t.features.goals.description}
                 </p>
               </div>
               <div className="relative p-4 overflow-hidden">
@@ -155,11 +156,10 @@ export default function LandingPage() {
             <div className="flex flex-col items-center space-y-6">
               <div className="text-center space-y-4">
                 <h3 className="text-2xl font-bold bg-gradient-to-r from-orange-500 via-blue-500 to-purple-500 bg-clip-text text-transparent">
-                  Cross-Device Sync
+                  {t.features.sync.title}
                 </h3>
                 <p className="text-lg text-muted-foreground max-w-2xl">
-                  Enjoy automatic synchronization across iPhone, iPad, Mac, and Apple Watch. Your productivity data is
-                  always up-to-date, no matter which device you're using.
+                  {t.features.sync.description}
                 </p>
               </div>
               <div className="relative p-4 overflow-hidden">
@@ -176,11 +176,10 @@ export default function LandingPage() {
             <div className="flex flex-col items-center space-y-6">
               <div className="text-center space-y-4">
                 <h3 className="text-2xl font-bold bg-gradient-to-r from-orange-500 via-blue-500 to-purple-500 bg-clip-text text-transparent">
-                  Other Powerful Features
+                  {t.features.other.title}
                 </h3>
                 <p className="text-lg text-muted-foreground max-w-2xl">
-                  Enhance your productivity with our additional features designed to support your focus and time
-                  management.
+                  {t.features.other.description}
                 </p>
               </div>
               <div className="relative p-4 overflow-hidden w-full">
@@ -188,27 +187,27 @@ export default function LandingPage() {
                 <div className="relative z-10 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-2xl mx-auto">
                     <div className="space-y-2">
-                      <h4 className="text-lg font-semibold">Stats</h4>
+                      <h4 className="text-lg font-semibold">{t.features.other.stats.title}</h4>
                       <p className="text-sm text-muted-foreground">
-                        Detailed statistics to track and analyze your productivity patterns over time.
+                        {t.features.other.stats.description}
                       </p>
                     </div>
                     <div className="space-y-2">
-                      <h4 className="text-lg font-semibold">Calendar</h4>
+                      <h4 className="text-lg font-semibold">{t.features.other.calendar.title}</h4>
                       <p className="text-sm text-muted-foreground">
-                        Integrated calendar to plan your tasks and visualize your productivity schedule.
+                        {t.features.other.calendar.description}
                       </p>
                     </div>
                     <div className="space-y-2">
-                      <h4 className="text-lg font-semibold">Rich Concentration BGM</h4>
+                      <h4 className="text-lg font-semibold">{t.features.other.bgm.title}</h4>
                       <p className="text-sm text-muted-foreground">
-                        A variety of background music options to enhance your focus during work sessions.
+                        {t.features.other.bgm.description}
                       </p>
                     </div>
                     <div className="space-y-2">
-                      <h4 className="text-lg font-semibold">Notification Feature</h4>
+                      <h4 className="text-lg font-semibold">{t.features.other.notification.title}</h4>
                       <p className="text-sm text-muted-foreground">
-                        Customizable notifications to keep you on track with your productivity goals.
+                        {t.features.other.notification.description}
                       </p>
                     </div>
                   </div>
@@ -241,7 +240,26 @@ export default function LandingPage() {
           </div>
         </div>
       </footer>
+
+      <LocaleSwitcher />
     </div>
+  )
+}
+
+export function LocaleSwitcher() {
+  const { locale, setLocale } = useLocale()
+
+  if (process.env.NODE_ENV !== 'development') {
+    return null
+  }
+
+  return (
+    <button
+      onClick={() => setLocale(locale === 'en' ? 'ja' : 'en')}
+      className="fixed bottom-4 right-4 z-50 bg-white p-2 rounded-lg shadow-lg"
+    >
+      Switch to {locale === 'en' ? '日本語' : 'English'}
+    </button>
   )
 }
 
